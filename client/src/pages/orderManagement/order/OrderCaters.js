@@ -181,9 +181,9 @@ const OrderCaters = () => {
         withCredentials: true,
       });
       const { statusText, data } = response;
-      console.log("inventory", data)
+      console.log("inventory", response)
       if (statusText === "OK") {
-        setInventoryItems(response);
+        setInventoryItems(data);
         setIsLoading(false);
       }
     } catch (error) {
