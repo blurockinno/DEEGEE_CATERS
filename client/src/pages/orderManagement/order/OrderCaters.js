@@ -183,7 +183,7 @@ const OrderCaters = () => {
       const { statusText, data } = response;
       console.log("inventory", data)
       if (statusText === "OK") {
-        setInventoryItems(data);
+        setInventoryItems(response);
         setIsLoading(false);
       }
     } catch (error) {
