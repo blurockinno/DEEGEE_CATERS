@@ -181,7 +181,6 @@ const OrderCaters = () => {
         withCredentials: true,
       });
       const { statusText, data } = response;
-      console.log("inventory", response)
       if (statusText === "OK") {
         setInventoryItems(data);
         setIsLoading(false);
@@ -191,6 +190,8 @@ const OrderCaters = () => {
       setIsLoading(false);
     }
   };
+
+  console.log("inventory", inventoryItems)
 
   // fucnticon for fatching the recipes
   const fetchRecipeItem = async () => {

@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
 
 // /cross origin resources sharing 
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL || 'https://localhost:3000',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 }))
