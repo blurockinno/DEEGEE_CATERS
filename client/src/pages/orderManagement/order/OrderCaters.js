@@ -17,7 +17,6 @@ import config from "../../../config/config"
 
 
 const OrderCaters = () => {
-  console.log("working")
   const navigate = useNavigate();
   const [allRecipe, setAllRecipe] = useState([]);
   const [formDataTent, setFormDataTent] = useState({
@@ -181,7 +180,6 @@ const OrderCaters = () => {
         withCredentials: true,
       });
       const { status, data } = response;
-      console.log("inventory", response)
       if (status === 200) {
         setInventoryItems(data);
         setIsLoading(false);
@@ -192,7 +190,6 @@ const OrderCaters = () => {
     }
   };
 
-  console.log("inventory", inventoryItems)
   
   // fucnticon for fatching the recipes
   const fetchRecipeItem = async () => {
