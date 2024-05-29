@@ -180,9 +180,9 @@ const OrderCaters = () => {
       const response = await axios.get(`${config.apiUrl}/inventory/all`, {
         withCredentials: true,
       });
-      const { statusText, data } = response;
+      const { status, data } = response;
       console.log("inventory", response)
-      if (statusText === "OK") {
+      if (status === 200) {
         setInventoryItems(data);
         setIsLoading(false);
       }
